@@ -1,0 +1,26 @@
+<%="hi #{current_user}"%>
+<%messages.each do |message|%>
+	<ul>
+		<li>
+			<%= message.message%><br>
+			<%= "Sent By: #{message.sender}"%>
+		</li>
+	</ul>
+<% end %>
+
+
+
+
+<form action="/send_message" method="POST">
+<input type="text" name="sent_message" placeholder="Message"/>
+<input type="text" name="sent_to" placeholder="Send To"/>	
+<input type="submit" value="Send"/>
+</form>
+
+<form action="/" method="GET">
+	<input type="submit" value="Main Wall"/>
+</form>
+
+<form action="/logout" method="POST">
+	<input type="submit" value="LOGOUT"/>
+</form>
