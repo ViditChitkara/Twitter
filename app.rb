@@ -2,6 +2,8 @@ require 'sinatra'
 require 'data_mapper'
 set :bind,'0.0.0.0'
 enable :sessions
+
+
 DataMapper.setup(:default, 'sqlite:////home/vidit/alchemy/lecture4/twitter/data.db')
 
 class User
